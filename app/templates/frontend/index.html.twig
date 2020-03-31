@@ -1,0 +1,141 @@
+{% extends 'frontend.html.twig' %}
+
+{% block body %}
+    <div class="row py-2">
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-header text-white bg-dark">
+                    Prochains matchs
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">14.03.2020 : FOOT FÉMININ : CSS REIMS - CSSM PARIS</li>
+                    <li class="list-group-item">14.03.2020 : FOOT MASCULIN : CSS REIMS - OS CHENNEVIERES</li>
+                    <li class="list-group-item">14.03.2020 : FOOT FÉMININ : CSS REIMS - CSSM PARIS</li>
+                    <li class="list-group-item">14.03.2020 : FOOT MASCULIN : CSS REIMS - CSSM PARIS</li>
+                    <li class="list-group-item">14.03.2020 : FOOT FÉMININ : CSS REIMS - CSSM PARIS</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-header text-white bg-dark">
+                    Résultats
+                </div>
+                <ul class="list-group list-group-flush">
+                    {% for match in matchs %}
+                        <li class="list-group-item"> 31-03-2020 :
+                            CSS REIMS
+                            <span class="badge badge-{% if match.typeScore == 'V' %}success
+                            {% elseif match.typeScore == 'N' %}info
+                           {% elseif match.typeScore == 'D' %}danger
+                             {% endif %}
+                            ">  {{ match.score }}
+                            </span>
+                            OSS
+                            VILLEURBANNE
+                        </li>
+
+                    {% endfor %}
+                    {#                    <li class="list-group-item">22.02.2020 : CSS REIMS <span class="badge badge-danger">#}
+                    {#                            5 - 0 </span> OSS VILLEURBANNE#}
+                    {#                    </li>#}
+                    {#                    <li class="list-group-item">22.02.2020 : CSS REIMS <span class="badge badge-info">#}
+                    {#                            5 - 0 </span> OSS VILLEURBANNE#}
+                    {#                    </li>#}
+                    {#                    <li class="list-group-item">22.02.2020 : CSS REIMS 5 - 0 OSS VILLEURBANNE</li>#}
+                    {#                    <li class="list-group-item">22.02.2020 : CSS REIMS 5 - 0 OSS VILLEURBANNE</li>#}
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="row"
+         data-masonry='{"percentPosition": true }'>
+        <div class="col-sm-6 col-lg-4 mb-4">
+            <div class="card">
+                <img src="{{ asset('images/portrait_paul-penaud.jpg') }}"
+                     class="card-img-top"
+                     alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title that wraps to a new line</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                        additional content. This content is a little bit longer.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-lg-4 mb-4">
+            <div class="card p-3">
+                <blockquote class="blockquote mb-0 card-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                    <footer class="blockquote-footer">
+                        <small class="text-muted">
+                            Someone famous in <cite title="Source Title">Source Title</cite>
+                        </small>
+                    </footer>
+                </blockquote>
+            </div>
+        </div>
+        <div class="col-sm-6 col-lg-4 mb-4">
+            <div class="card">
+                <img src="{{ asset('images/equipe.jpg') }}"
+                     class="card-img-top"
+                     alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This card has supporting text below as a natural lead-in to additional
+                        content.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-lg-4 mb-4">
+            <div class="card bg-primary text-white text-center p-3">
+                <blockquote class="blockquote mb-0">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
+                    <footer class="blockquote-footer text-white">
+                        <small>
+                            Someone famous in <cite title="Source Title">Source Title</cite>
+                        </small>
+                    </footer>
+                </blockquote>
+            </div>
+        </div>
+        <div class="col-sm-6 col-lg-4 mb-4">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This card has a regular title and short paragraphy of text below it.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-lg-4 mb-4">
+            <div class="card">
+                <img src="{{ asset('images/ronaldo.jpeg') }}"
+                     class="card-img-top"
+                     alt="...">
+            </div>
+        </div>
+        <div class="col-sm-6 col-lg-4 mb-4">
+            <div class="card p-3 text-right">
+                <blockquote class="blockquote mb-0">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                    <footer class="blockquote-footer">
+                        <small class="text-muted">
+                            Someone famous in <cite title="Source Title">Source Title</cite>
+                        </small>
+                    </footer>
+                </blockquote>
+            </div>
+        </div>
+        <div class="col-sm-6 col-lg-4 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is another card with title and supporting text below. This card has
+                        some additional content to make it slightly taller overall.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

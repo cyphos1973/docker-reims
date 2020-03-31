@@ -1,0 +1,56 @@
+{% extends 'backend.html.twig' %}
+
+{% block description 'A list of matchs.' %}
+
+{% block title 'Index' %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <h1>Matchs index</h1>
+
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>Score</th>
+                    <th>Score_detail</th>
+                    <th>TypeScore</th>
+                    <th>Id</th>
+                    <th>Uuid</th>
+                    <th>Published</th>
+                    <th>CreatedAt</th>
+                    <th>UpdatedAt</th>
+                    <th>actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for match in matchs %}
+                    <tr>
+                        <td>{{ match.description }}</td>
+                        <td>{{ match.score }}</td>
+                        <td>{{ match.scoreDetail }}</td>
+                        <td>{{ match.typeScore }}</td>
+                        <td>{{ match.id }}</td>
+                        <td>{{ match.uuid }}</td>
+                        <td>{{ match.published ? 'Yes' : 'No' }}</td>
+                        <td>{{ match.createdAt ? match.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+                        <td>{{ match.updatedAt ? match.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+                        <td>
+                            <a href="{{ path('matchs_show', {'id': match.id}) }}">show</a>
+                            <a href="{{ path('matchs_edit', {'id': match.id}) }}">edit</a>
+                        </td>
+                    </tr>
+                {% else %}
+                    <tr>
+                        <td colspan="10">no records found</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+
+            <a href="{{ path('matchs_new') }}">Create new</a>
+
+        </div>
+    </div>
+{% endblock %}

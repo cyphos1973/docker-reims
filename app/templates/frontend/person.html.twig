@@ -1,0 +1,103 @@
+{% extends 'frontend.html.twig' %}
+
+{% block body %}
+    <div class="row py-2">
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-header text-white bg-dark">
+                    IDENTITÉ : Julien DUPONT
+                </div>
+                <div class="card-body">
+                    <img src="{{ asset('images/portrait_ronaldo.jpg') }}" alt="" height="200px">
+                    <h5 class="card-title">Date de Naisance : 14/05:1991 </h5>
+                    <h5 class="card-title">Lieu de Naisance : Reims </h5>
+                    <h5 class="card-title">Âge : 28 ans</h5>
+                    <h5 class="card-title">Clubs : CSS REIMS</h5>
+                    <h5 class="card-title">Sélections internationales : 24 matchs</h5>
+                    <h5 class="card-title">Participations internationales : Deaflympics 2017, Euro 2016</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-header text-white bg-dark">
+                    PALMARÈS : Julien DUPONT
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Trophée des champions : 3 </h5>
+                    <p class="text">
+                        2013, 2015, 2017, 2018, 2019, 2020
+                    </p>
+                    <h5 class="card-title">Championnat de France : 5</h5>
+                    <p class="text">
+                        2013, 2015, 2017
+                    </p>
+                    <h5 class="card-title">Coupe de France : 4 </h5>
+                    <p class="text">
+                        2013, 2015, 2017
+                    </p>
+                    <h5 class="card-title">Deaflympics :  </h5>
+                    <p class="text">
+                        2013, 2015, 2017
+                    </p>
+                    <h5 class="card-title">Mondial :  </h5>
+                    <p class="text">
+                        2013, 2015, 2017
+                    </p>
+                    <h5 class="card-title">Euro :  </h5>
+                    <p class="text">
+                        2013, 2015, 2017
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row py-2">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-header text-white bg-dark">
+                    CARRIÈRE : Julien DUPONT
+                </div>
+                <div class="card-body">
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th>Saison</th>
+                            <th>Club</th>
+                            <th>Matchs</th>
+                            <th>Buts</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>2019-2020</td>
+                            <td>CSS REIMS</td>
+                            <td>20</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td>2019-2020</td>
+                            <td>CSS REIMS</td>
+                            <td>20</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td>2019-2020</td>
+                            <td>CSS REIMS</td>
+                            <td>20</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td>2019-2020</td>
+                            <td>CSS REIMS</td>
+                            <td>20</td>
+                            <td>12</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

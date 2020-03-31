@@ -1,0 +1,47 @@
+{% extends 'backend.html.twig' %}
+
+{% block title %}Backend{% endblock %}
+
+{% block body %}
+    <!-- Main content -->
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Hello {{ controller_name }}! ✅</h3>
+                            <div class="card-tools">
+                                <!-- Buttons, labels, and many other things can be placed here! -->
+                                <!-- Here is a label for example -->
+                                <span class="badge badge-primary">Label</span>
+                            </div>
+                            <!-- /.card-tools -->
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            This friendly message is coming from:
+                            <ul>
+                                <li>Your controller at
+                                    <code><a href="{{ '/home/wwwroot/app/src/Controller/BackendController.php'|file_link(0) }}">src/Controller/BackendController.php</a></code>
+                                </li>
+                                <li>Your template at
+                                    <code><a href="{{ '/home/wwwroot/app/templates/backend/index.html.twig'|file_link(0) }}">templates/backend/index.html.twig</a></code>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- /.card-body -->
+                        <div class="card-footer">
+                            The footer of the card
+                        </div>
+                        <!-- /.card-footer -->
+                    </div>
+                    <!-- /.card -->
+                </div>
+
+            </div>
+            <!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content -->
+{% endblock %}
